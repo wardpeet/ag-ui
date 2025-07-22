@@ -2,11 +2,12 @@ type envVars = {
   serverStarterUrl: string;
   serverStarterAllFeaturesUrl: string;
   mastraUrl: string;
-  langgraphUrl: string;   
+  langgraphUrl: string;
   langgraphFastApiUrl: string;
   agnoUrl: string;
   llamaIndexUrl: string;
   crewAiUrl: string;
+  pydanticAIUrl: string;
 }
 
 export default function getEnvVars(): envVars {
@@ -19,5 +20,6 @@ export default function getEnvVars(): envVars {
         agnoUrl: process.env.AGNO_URL || 'http://localhost:9001',
         llamaIndexUrl: process.env.LLAMA_INDEX_URL || 'http://localhost:9000',
         crewAiUrl: process.env.CREW_AI_URL || 'http://localhost:9002',
+        pydanticAIUrl: process.env.PYDANTIC_AI_URL || 'http://localhost:9000',
     }
 }
